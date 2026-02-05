@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+
+  /* Chrome, Edge, Safari */
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  /* Firefox */
+  input[type="datetime-local"] {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
+}
+
+
+:root {
+  /* Core Backgrounds */
+  --bg-main: radial-gradient(circle at top right, #1a1a2e, #0a0a0c);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(16px);
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+
+  /* Brand & Status */
+  --primary-accent: #3b82f6;
+  /* Consistent Electric Blue */
+  --accent-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  --danger: #ef4444;
+  --success: #10b981;
+
+  /* Layout */
+  --sidebar-width: 260px;
+  --border-radius: 16px;
+}
+
+
+html,
+body,
+#app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--bg-main); */
+  background: var(--bg-main);
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.inner-glow {
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.03);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.3;
+}
