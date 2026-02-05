@@ -6,7 +6,7 @@ const useAuth = () => {
     const { LoginS } = useAccountStore();
 
     const AUTH_APP_URL = import.meta.env.VITE_AUTH_APP;
-    const THIS_APP_URL = import.meta.env.VITE_THIS_APP;
+    const THIS_APP_URL = "https://goat-to-do-app-2.vercel.app/";
     const THIS_APP_NAM = import.meta.env.VITE_THIS_APP_NAME;
     const API_URL = import.meta.env.VITE_APP_API
 
